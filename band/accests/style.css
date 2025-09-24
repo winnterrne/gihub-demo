@@ -1,0 +1,518 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+1. Vị trí
+2. Kích thước (width, heigth)
+3. Màu sắc
+4. Kiểu dáng
+*/
+
+.clear {
+    clear: both;
+
+}
+
+#main {
+
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav, .subnav {
+    list-style: none;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+
+    position: relative;
+}
+
+#nav > li > a {    /* the cap 2 */
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: block;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav li:hover a,
+#nav  > li:hover >  a {
+    color: black;
+    background-color: gray;
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0px 16px;
+}
+
+
+#nav .subnav {
+    position: absolute;
+    display: none;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0  10px rgba(0,0,0,0.3);
+    min-width: 160px;
+    
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-button {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url('./imgs/0035221180_10.jpg');
+    background-position: top;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    text-align: center;
+    width: 100%;;
+    color: #fff;
+
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#slider .text-description {
+    font-size: 15px;
+}
+
+#content {
+    
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 550;
+    letter-spacing: 4px;
+}
+
+#content .section-subheading {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    color: gray;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 80px;
+}
+
+#content .members-list {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+#content .members-item {
+    width: 200px;
+    height: 200px;
+    
+}
+
+#content .members-name {
+    text-align: center;
+    font-size: 16px;
+}
+
+#content .members-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Tour section*/
+.tour-section {
+    background-color: black;
+}
+
+.ticket-list {
+    background-color: #fff;
+    margin-top: 50px;
+    
+}
+
+.ticket-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px;
+    border-color: #ddd;
+    border-style: solid;
+}
+
+.ticket-list .sold-out {
+    background-color: #f44336;
+    color:#fff;
+    padding: 3px 4px;
+    margin-left: 10px;
+}
+
+.ticket-list .buy,
+.ticket-list .sold-out:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.ticket-list .buy {
+    background-color: gray;
+    color: white;
+    padding: 4px 4px;
+    margin-left: 10px;
+}
+
+/* PLACES */
+
+.places-list {
+    margin-top: 32px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-bottom: 32px;
+}
+
+.places-item {
+    float: left;
+    width: 33.3333%;
+    padding-top: 0;
+    padding: 8px 8px;
+}
+.places-img {
+    width: 100%;
+    display: block;
+}
+
+.places-img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.places-body {
+    font-size: 15px;
+    background-color: white;
+    padding: 16px;
+}
+.places-heading {
+    font-weight: 500px;
+    font-size: 16px;
+}
+.places-time {
+    margin-top: 15px;
+    color: #757575;
+}
+.places-text {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.places-buy-button {
+    margin-bottom: 16px;   
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    padding:11px 17px;
+    display: inline-block;
+    margin-top: 23px;
+}
+
+.places-buy-button:hover {
+    background-color: #757575;
+    color: black;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open {
+    display:flex;
+}
+
+.modal-header {
+    background-color: #757575;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+.modal-contaner {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ddd;
+    padding: 13px;
+}
+
+.modal-close:hover {
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+
+.modal-body {
+    padding: 16px;
+    
+}
+
+.modal-label {
+    display: block  ;
+    font-size: 15px;
+    margin: 16px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    padding-top: 16px;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#buy-tickets {
+    background-color: #757575;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 17px;
+    color: white;
+}
+
+#buy-tickets:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+
+}
+
+.box {
+    margin-top: 40px;
+    flex-wrap: wrap;
+    display: inline-block;
+    text-align: left;
+    margin-right: 200px;
+}
+
+.first-box {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: gray;
+    padding-right: 50px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    border-color: gray;
+    border-width: 1px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+            .last-box {
+                width: 200px;
+                height: 50px;
+                background-color: white;
+                color: gray;
+                padding-right: 50px;  
+                padding-top: 6px;
+                padding-bottom: 6px;
+                padding-left: 10px;  
+                border-color: gray;
+                border-width: 1px;
+                font-size: 13px;
+                margin-bottom: 7px;
+                border-radius: 5px;
+                cursor: pointer;
+                display: inline-block
+            }
+            
+            .mail-box {
+                width: 419px;
+                height: 50px;
+                background-color: white;
+                color: gray;
+                padding-left: 10px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                border-width: 1px;
+                border-color: gray;
+                border-radius: 5px;
+                font-size: 13px;
+                cursor: pointer;
+                display: block;
+                
+            }
+
+            .sign-box {
+                margin-top: 8px;
+                font-weight: bold;
+                color: white;
+                background-color: black;
+                border: none;
+                width: 80px;
+                height: 50px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                 
+}
+
+.contact-list {
+    text-align: right;
+    display: inline-block;
+    align-items: center;
+    font-size: 17px;
+ 
+}
+
+.contact-list i {
+    width: 20px;
+    margin-right: 0px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAp */
+.map-section img {
+    width: 100%;
+}
+
+#footer { 
+    padding: 64px 16px;
+    text-align: center;
+    font-size: 24px;
+}
+.social a {
+    color: #757575;
+    text-decoration: none;
+}
+.social a:hover {
+    opacity: 0.5;
+}
+
+#footer .copy-right  a{
+    margin-top: 15px;
+    font-size: 16px;
+    color: #757575;
+}
+
+
