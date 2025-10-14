@@ -1,0 +1,61 @@
+
+    .uber {
+        background-color: black;
+        color: white;
+        border: none;
+        margin-right: 20px;
+        cursor: pointer;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
+        transition: opacity 1s;
+    }
+    .uber:hover {
+        opacity: 0.7;
+    }
+    .uber:active {
+        opacity: 0.5;
+    }
+    .Amazon {
+        background-color: yellow;
+        color: black;
+        cursor: pointer;
+        border-radius: 25px;
+        border-style: solid;
+        border: none;
+        margin-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 26px;
+        padding-right: 26px;
+        transition: background-color 1s,
+          color 1s;
+    }
+    .Amazon:hover {
+        background-color: blue;
+        color: white;
+
+    }
+    .Amazon:active {
+        opacity: 0.7;
+        
+    }
+    .Github {
+        background-color: orangered;
+        color: white;
+        cursor: pointer;
+        border: none;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        transition: box-shadow 1s;
+    }
+    .Github:hover {
+        
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    }
+

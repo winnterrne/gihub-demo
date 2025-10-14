@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>display block</title>
+        <style>
+            
+            .first-box {
+                width: 100px;
+                background-color: white;
+                color: gray;
+                padding-right: 50px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                padding-left: 10px;
+                border-color: gray;
+                border-width: 1px;
+                font-size: 13px;
+                display: inline-block;
+                margin-bottom: 7px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .last-box {
+                width: 100px;
+                background-color: white;
+                color: gray;
+                padding-right: 50px;  
+                padding-top: 6px;
+                padding-bottom: 6px;
+                padding-left: 10px;  
+                border-color: gray;
+                border-width: 1px;
+                font-size: 13px;
+                margin-bottom: 7px;
+                border-radius: 5px;
+                cursor: pointer;
+                display: inline-block
+            }
+            
+            .mail-box {
+                width: 313px;
+                background-color: white;
+                color: gray;
+                padding-left: 10px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                border-width: 1px;
+                border-color: gray;
+                border-radius: 5px;
+                font-size: 13px;
+                cursor: pointer;
+                display: block;
+            }
+
+            .sign-box {
+                margin-top: 8px;
+                font-weight: bold;
+                color: white;
+                background-color: rgb(54, 54, 240);
+                border: none;
+                width: 324px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                 
+            }
+
+            .sign-box:hover {
+                background-color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <input class="first-box" type="text" placeholder="First Name">
+        <input class="last-box" type="text" placeholder="Last Name">
+        <input class="mail-box" type="text" placeholder="Email">
+
+        <button class="sign-box">Sign Up</button>
+    </body>
+</html>
