@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSSV>
+    <ThiSinh>
+        <SBD>001</SBD>
+        <HT>Nguyen Van A</HT>
+        <NamSinh>2003</NamSinh>
+        <Toan>8.5</Toan>
+        <Van>7.0</Van>
+        <NN>8.0</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>002</SBD>
+        <HT>Tran Thi B</HT>
+        <NamSinh>2004</NamSinh>
+        <Toan>6.5</Toan>
+        <Van>8.2</Van>
+        <NN>7.5</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>003</SBD>
+        <HT>Le Van C</HT>
+        <NamSinh>2003</NamSinh>
+        <Toan>9.0</Toan>
+        <Van>6.8</Van>
+        <NN>7.2</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>004</SBD>
+        <HT>Pham Thi D</HT>
+        <NamSinh>2005</NamSinh>
+        <Toan>5.5</Toan>
+        <Van>7.6</Van>
+        <NN>6.8</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>005</SBD>
+        <HT>Hoang Van E</HT>
+        <NamSinh>2004</NamSinh>
+        <Toan>7.8</Toan>
+        <Van>7.4</Van>
+        <NN>8.1</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>006</SBD>
+        <HT>Nguyen Thi F</HT>
+        <NamSinh>2003</NamSinh>
+        <Toan>8.2</Toan>
+        <Van>8.9</Van>
+        <NN>9.0</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>007</SBD>
+        <HT>Dang Van G</HT>
+        <NamSinh>2002</NamSinh>
+        <Toan>6.0</Toan>
+        <Van>6.5</Van>
+        <NN>7.0</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>008</SBD>
+        <HT>Tran Thi H</HT>
+        <NamSinh>2004</NamSinh>
+        <Toan>7.0</Toan>
+        <Van>8.0</Van>
+        <NN>8.5</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>009</SBD>
+        <HT>Le Van I</HT>
+        <NamSinh>2003</NamSinh>
+        <Toan>9.2</Toan>
+        <Van>7.5</Van>
+        <NN>8.8</NN>
+    </ThiSinh>
+    <ThiSinh>
+        <SBD>010</SBD>
+        <HT>Pham Thi K</HT>
+        <NamSinh>2005</NamSinh>
+        <Toan>6.8</Toan>
+        <Van>7.9</Van>
+        <NN>7.3</NN>
+    </ThiSinh>
+</DSSV>

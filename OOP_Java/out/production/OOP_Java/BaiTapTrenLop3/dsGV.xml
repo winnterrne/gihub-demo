@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dsGiaoVien>
+    <giaoVien>
+        <tenNguyenDay>Nguyen Van A</tenNguyenDay>
+        <soNhom>2</soNhom>
+    </giaoVien>
+    <giaoVien>
+        <tenNguyenDay>Tran Thi B</tenNguyenDay>
+        <soNhom>1</soNhom>
+    </giaoVien>
+    <giaoVien>
+        <tenNguyenDay>Le Van C</tenNguyenDay>
+        <soNhom>3</soNhom>
+    </giaoVien>
+</dsGiaoVien>
