@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+#main {
+    padding-top: 80px;
+}
 
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -37,6 +40,7 @@ body {
 
 #header {
     height: 85px;
+    position: fixed;
     background-color: #fff;
     top: 0;
     left: 0;
@@ -47,6 +51,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 }
 
 #header .menu {
@@ -181,7 +186,7 @@ body {
 }
 
 .hover-text {
-    width: 100px;
+    width: 120px;
     height: 55px;
     position: absolute;
     top: 20px;
@@ -210,22 +215,81 @@ body {
                       /* HEADER: END */
 
                       /* CONTENT-SLIDER: BEGIN */
-#slider {
-    background-image: url('./img/ms_banner_img2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-top: 39%;
+.slider-content {
+  padding-top: 36px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+.mySlides:first-child {
+    display: block;
+}
+.mySlides .text-content {
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 10px;
 }
 
-#slider .text-content {
-    text-align: center;
-    font-style: italic;
-    font-size: 12px;
-}
 
                     /* CONTENT-SLIDER: END */
 
+
+/*
+===CSS LOGIN - LOGOUT : BEGIN===
+*/
+
+.container-log{
+  max-width: 900px;
+  height: 450px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+.container-log h2 {
+    margin-bottom: 20px;
+    color: forestgreen;
+}
+.container-log button {
+  border: none;
+  height: 45px;
+  border-radius: 4px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: forestgreen;
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--dark);
+}
+
+.container-log input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+/*
+===CSS LOGIN - LOGOUT : END===
+*/
                     /* CONTENT-ABOUT US : BEGIN */
 #content-contact,
 #content-newbooks,
@@ -352,7 +416,7 @@ body {
     bottom: 20%;
     visibility:hidden;
     transform: translateY(40px);
-    transition: all 0.8s ease;
+    transition: all 0.2s ease;
 }
 .content-book:hover .action-cart {
     opacity: 1;
@@ -515,3 +579,237 @@ body {
 .contact-list i::before {
     margin-right: 5px;
 }
+/*
+              PAGINATION
+*/
+.content-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paignation {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px;
+}
+.paignation ul {
+    margin: 20px 30px;
+}
+.paignation ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    background: #ccc;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.paignation ul li:hover {
+    background-color: #ff4568;
+    background-position: 0 -45px;
+    transition: background-color  0.5s;
+}
+.paignation .btn2,
+.paignation .btn1 {
+ 
+    align-items: center;
+    font-size: 17px;
+    font-weight: 400px;
+    color: #383838;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.paignation ul li.active {
+    color: #fff;
+    background-image: linear-gradient(#ff4568,#ff4568);
+    background-repeat: no-repeat;
+}
+
+
+/* 
+FOOTERR
+*/
+.container {
+    border-top: solid;
+    border-top-width: 1.6px;
+    border-color: forestgreen;
+}
+.row {
+    display: flex;
+
+}
+.first-col {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 100px;
+    font-size: 18px;
+    line-height: 50px;
+}
+.list-menu,
+.list-contact {
+    list-style-type: none;
+}
+.first-col img {
+    width: 70px;
+}
+.first-col i {
+    color: forestgreen;
+    margin-right: 5px;
+}
+.third-col,
+.second-col {
+    margin-left: 280px;
+    margin-top: 70px;
+    font-size: 18px;
+    line-height: 50px;
+}
+.title-menu {
+    font-size: larger;
+    color: forestgreen;
+}
+.social {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.social a {
+    color: #757575;
+    text-decoration: none;
+}
+.social a:hover {
+    opacity: 0.5;
+}
+.word-footer {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+}
+.copy-right  a{
+    margin-top: 15px;
+    font-size: 16px;
+    color: #757575;
+}
+
+/*  =========== HISTORY =========== */
+.cart-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2 {
+  color: var(--green-main);
+  margin-bottom: 20px;
+}
+
+.cart-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cart-left {
+  flex: 2;
+}
+
+.cart-right {
+  flex: 1;
+  background: var(--beige);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-align: left;
+}
+
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-product img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.qty button {
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.qty span {
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.price,
+.subtotal {
+  color: var(--green-main);
+  font-weight: 600;
+}
+
+.remove {
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.cart-right h3 {
+  color: var(--green-dark);
+  margin-bottom: 15px;
+}
+
+.cart-right input,
+.cart-right textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.cart-right button {
+  width: 100%;
+}
+
+
+
+
+
+
+
+

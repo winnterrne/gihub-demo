@@ -3,12 +3,30 @@
     margin: 0;
     box-sizing: border-box;
 }
+#main {
+    padding-top: 80px;
+}
 
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400px;
     color: #212529;
     scroll-behavior: smooth;
+}
+body {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 /*
@@ -22,6 +40,7 @@ html {
 
 #header {
     height: 85px;
+    position: fixed;
     background-color: #fff;
     top: 0;
     left: 0;
@@ -32,6 +51,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 }
 
 #header .menu {
@@ -166,7 +186,7 @@ html {
 }
 
 .hover-text {
-    width: 100px;
+    width: 120px;
     height: 55px;
     position: absolute;
     top: 20px;
@@ -191,198 +211,205 @@ html {
 .hover-text a:hover {
   color: #007BFF;
 }
-        /*   HEADER-END */
-.row {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    margin-left: -10px;
-    margin-right: -10px;
+
+                      /* HEADER: END */
+
+                      /* CONTENT-SLIDER: BEGIN */
+.slider-content {
+  padding-top: 36px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
 }
-.img-book img {
-    width: 350px;
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    width: 100%;
+    object-fit: cover;
     height: auto;
 }
-.namebook {
-    font-weight: 500px;
+.mySlides:first-child {
+    display: block;
 }
-.author {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
+.mySlides .text-content {
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 10px;
 }
-.author .sytle-author {
-    font-weight: bold;
+
+#content-newbooks {
+    padding-left: 85px;
+    padding-right: 85px;
+    margin-top: 20px;
 }
-.price {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.title-header {
+    border-top: solid 1.6px forestgreen;
+    padding-top: 20px;
+    padding-bottom: 22px;
 }
-.price .prodcut-price {
+/* CAC TITLE HEADER CUA TUNG CONTENT*/
+.title-header h5,
+.title-header h4,
+.title-header h3 {
+    font-size: 25px;
     color: forestgreen;
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 1.5;
-    margin-right: 10px;
+    margin: 0;
 }
-.price .old-price {
-    font-size: 20px;
-    text-decoration: line-through;
-    color: gray;
-    margin-right: 10px;
+
+                      /* CONTENT-NEWBOOKS : BEGIN */
+
+.list-book {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
 }
-.price .sale-price {
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    border-radius: 5px;
-    width: 49px;
-    height: 20px;
+.about-newbooks {
+    display: flex;
+    align-items: flex-start;  
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content-book {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-weight: bold;
-    display: inline-block;
+    width: 250px;
+    margin-bottom: 20px;
 }
-.button-number {
+
+.content-book img {
+    width: 90%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 1px;
+    transition: transform 0.3s ease;
+}
+.content-book .book-child {
+    align-items: center; 
+}
+.content-book:hover .book-love,
+.content-book:hover .book-horror,
+.content-book:hover .book-history,
+.content-book:hover .book-child {
+    transform: scale(1.08);
+}
+
+    /* NUT MUA HANG*/
+.content-book .action-cart {
+    display: flex;
+    cursor: grab;
+    height: 45px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20%;
+    visibility:hidden;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+.content-book:hover .action-cart {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#newbooks .buy-btn-left {
+    align-items: center;
+    background-color: white;
+    width: 44px;
+    height: 46px;
+    border: 1px solid forestgreen;
+    border-radius: 4px;
+    color: forestgreen;
+    font-size: large;
+    margin-right: 2px;
+    cursor: pointer;
+    transition: background-color 1s;
+     color: 1s;
+}
+
+#newbooks .buy-btn-left:hover {
+    background-color: forestgreen;
+    color: white;
+}
+#newbooks .buy-btn-right {
+    height: 46px;
+    width: 160px;
+    background-color: forestgreen;
+    border: 1px solid;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 1s;
+     color: 1s;
+}
+#newbooks .buy-btn-right:hover {
+    background-color: white;
+    color: forestgreen;
+}
+
+/*  THONG TIN SACH  */
+#newbooks .info-book {
+    text-align: center;
+    margin-top: 15px;
+    color: #333; 
+}
+#newbooks .info-book p,
+#newbooks .info-book h3  {
+    display: inline-block;  
+}
+
+.content-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paignation {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    width: 120px;
-}
-.button-number button  {
-  width: 30px;
-  height: 35px;
-  font-size: 20px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #333;
-  transition: background-color 0.2s;
-}
-.button-number button:hover {
-    background-color: #f2f2f2;
-}
-.button-number input {
-  width: 60px;
-  height: 35px;
-  text-align: center;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
-.button-buy p{
-    margin-top: 10px;
-    color: gray;
-}
-
-.button-action {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 15px;
-    cursor: grab;
-}
-.button-action .btn-left {
-    height: 65px;
-    width: 224px;
-    background-color: white;
-    border: 1px solid;
-    border-radius: 4px;
-    color: forestgreen;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 10px;
-    text-align: center;
-    font-size: 16px;
-    transition: background 1s;
-     color: 1s;
-}
-.button-action .btn-left:hover {
-    background-color: forestgreen;
-    color: white;
-}
-.button-action .btn-right {
-    height: 65px;
-    width: 224px;
-    background-color: forestgreen;
-    border: 1px solid;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 10px;
-    text-align: center;
-    font-size: 16px;
-    transition: background 1s;
-     color: 1s;
-}
-.button-action .btn-right:hover {
-    background-color: white;
-    color: forestgreen;
-}
-
-
-/* ROW: END */
-
-/* CONTENT:BOOK*/
-.child-row {
-    display: flex;
-    gap: 40px;
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
-.intro-book {
-    max-width: 1000px;
-}
-.intro-book h3 {
-    font-size: 21px;
-    margin-bottom: 20px;
-    color: forestgreen;
-    margin-left: 100px;
-}
-.content-book p{
-    font-size: 17px;
-    margin-left: 100px;
-    margin-bottom: 18px;
-    text-align: justify;
-}
-.about-book {
-    width: 350px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 16px 20px;
     background-color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px;
 }
-.about-book .title-intro {
-    color: forestgreen;
-    font-weight: 600px;
-    font-size: 21px;
-    margin-bottom: 18px;
+.paignation ul {
+    margin: 20px 30px;
 }
-.book-info-detail {
-  list-style-type: disc; 
-  padding-left: 20px;
-  margin: 0;
+.paignation ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    background: #ccc;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 30px;
+    cursor: pointer;
 }
-.book-info-detail li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-  line-height: 1.5;
+.paignation .btn2,
+.paignation .btn1 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 400px;
+    color: #383838;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
-.book-info-detail li span:first-child {
-  color: #333;
+.paignation ul li.active {
+    color: #fff;
+    background-image: linear-gradient(#ff4568,#ff4568);
+    background-repeat: no-repeat;
 }
-
-.book-info-detail li span:last-child {
-  font-weight: 600;
-  color: #000;
-}
-
-/*FOOTTER */
-
 .container {
     border-top: solid;
     border-top-width: 1.6px;
@@ -421,7 +448,6 @@ html {
     font-size: larger;
     color: forestgreen;
 }
-
 .social {
     font-size: 35px;
     display: flex;
@@ -445,9 +471,3 @@ html {
     font-size: 16px;
     color: #757575;
 }
-
-
-
-
-
-
