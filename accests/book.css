@@ -26,7 +26,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: solid;
+    border-bottom: 2px;
     border-color: green;
     border-bottom-width: 1.6px;
     display: flex;

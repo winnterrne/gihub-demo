@@ -179,3 +179,9 @@ if (orderForm) {
 
 // Chạy render khi có trang giỏ hàng
 renderCart();
+
+//
+function viewBook(id) {
+    window.location.href = `book.html?id=${id}`;
+}
+
